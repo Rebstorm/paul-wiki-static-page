@@ -1,0 +1,37 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(180deg, rgba(9,9,121,1) 0%, rgba(29,141,163,1) 50%, rgba(9,9,121,1) 100%);
+    color: #fff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: black;
+    color: #fff;
+  }
+}
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  background-size: 600% 600%;
+  animation: gradientAnimation 30s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 50% 0%
+  }
+  100% {
+    background-position: 50% 100%
+  }
+}
