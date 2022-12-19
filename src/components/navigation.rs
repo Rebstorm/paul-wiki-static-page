@@ -9,7 +9,7 @@ pub fn navigation() -> Html {
     html! {
         <nav class="container">
             <Link<AvailableRoutes> to={AvailableRoutes::Home}>
-                { "Home" }
+                <div>{"home we go"} </div>
             </Link<AvailableRoutes>>
             <Link<AvailableRoutes> to={AvailableRoutes::Info}>
                 { "Info" }

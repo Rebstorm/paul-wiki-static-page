@@ -15,8 +15,8 @@ use crate::navigation::{
 pub fn app() -> Html {
     html! {
         <BrowserRouter>
+            <Navigation />
             <div class="container">
-                <Navigation />
                 <Switch<AvailableRoutes> render={switch} />
             </div>
         </BrowserRouter>

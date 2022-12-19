@@ -9,7 +9,7 @@ use crate::components::{
 #[function_component(Index)]
 pub fn index() -> Html {
     html! {
-        <div>
+        <div class="index">
           <MainView />
         </div>
     }
