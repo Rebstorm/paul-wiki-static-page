@@ -1,16 +1,22 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
-use crate::navigation::route::Route;
 
+use crate::navigation::route::AvailableRoutes;
 
 #[function_component(Navigation)]
 pub fn navigation() -> Html {
 
-    let navigator = use_navigator().unwrap();
-
     html! {
-        <nav>
-            {"hello"}
+        <nav class="container">
+            <Link<AvailableRoutes> to={AvailableRoutes::Home}>
+                { "Home" }
+            </Link<AvailableRoutes>>
+            <Link<AvailableRoutes> to={AvailableRoutes::Info}>
+                { "Info" }
+            </Link<AvailableRoutes>>
+            <Link<AvailableRoutes> to={AvailableRoutes::NotFound}>
+                { "Copyright" }
+            </Link<AvailableRoutes>>
         </nav>
     }
 }

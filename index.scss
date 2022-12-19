@@ -19,12 +19,16 @@ body {
 }
 
 body {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   background-size: 600% 600%;
   animation: gradientAnimation 30s ease infinite;
+}
+
+div.container{
+  flex-direction: column;
 }
 
 @keyframes gradientAnimation {

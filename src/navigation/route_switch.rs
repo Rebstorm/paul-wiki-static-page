@@ -1,5 +1,5 @@
 use yew::{Html, html};
-use crate::navigation::route::Route;
+use crate::navigation::route::AvailableRoutes;
 
 
 use crate::pages::{
@@ -8,13 +8,10 @@ use crate::pages::{
 
 
 
-pub fn switch(routes: Route) -> Html {
+pub fn switch(routes: AvailableRoutes) -> Html {
     match routes {
-        Route::Home => html! { <Index /> },
-        Route::Secure => html! {
-            <div></div>
-        },
-        Route::Info => html! { <Info /> },
-        Route::NotFound => html! { <h1>{ "404" }</h1> },
+        AvailableRoutes::Home => html! { <Index /> },
+        AvailableRoutes::Info => html! { <Info /> },
+        AvailableRoutes::NotFound => html! { <h1>{ "404" }</h1> },
     }
 }
