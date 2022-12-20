@@ -27,6 +27,13 @@ body {
   animation: gradientAnimation 30s ease infinite;
 }
 
+// General rules
+
+a {
+  color: #fff;
+}
+
+// Main View
 div.content {
   margin: 2rem;
   color: #fff;
@@ -34,6 +41,7 @@ div.content {
   animation: fromRight 1s ease;
 }
 
+// Main Container
 div.container {
   flex-direction: column;
   align-items: center;
