@@ -8,7 +8,6 @@ body {
 @media (prefers-color-scheme: dark) {
   nav.container {
     background: #252525;
-    // TODO: Remove , only for debug - background: #d3d3d3;
   }
 }
 
@@ -21,10 +20,18 @@ body {
 body {
   display: flex;
   background: linear-gradient(45deg, #D42274, #2254D4, #28d73f);
+  font-family: 'Nunito', sans-serif;
   flex-direction: row;
   font-size: 16px;
   background-size: 600% 600%;
   animation: gradientAnimation 30s ease infinite;
+}
+
+div.content {
+  margin: 2rem;
+  color: #fff;
+  transition: ease 250ms;
+  animation: fromRight 1s ease;
 }
 
 div.container {
@@ -70,18 +77,16 @@ nav.container {
 
   body {
     display: flex;
+    font-size: 36px;
     flex-direction: column-reverse;
-    font-size: 48px;
-    height: 100vh;
   }
 
   div.container {
-    flex-direction: row;
+    margin-bottom: auto;
   }
 
   nav.container {
     position: sticky;
-    bottom: 0;
     width: 100vw;
     display: flex;
     gap: 6rem;
@@ -107,4 +112,9 @@ nav.container {
   100% {
     background-position: 0% 50%;
   }
+}
+
+@keyframes fromRight {
+  0% { padding-left: 2rem}
+  100% { padding-left: 0}
 }

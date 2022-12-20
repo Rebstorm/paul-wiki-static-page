@@ -10,7 +10,7 @@ use crate::components::{
 pub fn index() -> Html {
     html! {
         <div class="index">
-          <MainView />
+          <MainView title="Paul" >{"Hello you fucks 123213"}</MainView>
         </div>
     }
 }

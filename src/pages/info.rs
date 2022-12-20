@@ -1,11 +1,15 @@
 use yew::{function_component, html, Html};
 
+use crate::components::{
+    main_view::MainView
+};
 
 #[function_component(Info)]
 pub fn info() -> Html {
     html! {
-        <div>
-          {"I am a fucking info"}
-        </div>
+        <MainView title="Stack">
+            <div> {"hi"} </div>
+            <div> {"bye"} </div>
+        </MainView>
     }
 }
