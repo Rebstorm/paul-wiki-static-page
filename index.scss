@@ -4,16 +4,17 @@ body {
   margin: 0;
 }
 
+// Depending on theming - We set background slightly different.
 @media (prefers-color-scheme: dark) {
-  body {
-    color: #fff;
+  nav.container {
+    background: #252525;
+    // TODO: Remove , only for debug - background: #d3d3d3;
   }
 }
 
 @media (prefers-color-scheme: light) {
-  body {
-    background: black;
-    color: #fff;
+  nav.container {
+    background: #d3d3d3;
   }
 }
 
@@ -26,7 +27,7 @@ body {
   animation: gradientAnimation 30s ease infinite;
 }
 
-div.container{
+div.container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -39,41 +40,42 @@ nav.container {
   display: grid;
   grid-auto-flow: row;
   gap: 2rem;
-  padding: 2rem 0 2rem 0;
   justify-content: center;
-  box-shadow: inset -13px 0px 23px -5px rgba(0,0,0,0.52);
+  box-shadow: inset -13px 0px 23px -5px rgba(0, 0, 0, 0.52);
   width: clamp(2rem, 2.5vw, 3rem);
-  background: #252525;
   transition: 250ms ease-in all;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 
-  & > a {
-    color: #f6f6f6;
-    text-decoration: none;
+  & > .target {
+    height: 100%;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    transition: 250ms ease-in all;
+
+    &:hover {
+      filter: opacity(25%);
+    }
   }
 
   &:hover {
     width: clamp(7rem, 2.5vw, 4rem);
-
   }
 }
 
-
-@media screen and (max-width:999px) {
+// Phones and Phablets.
+@media screen and (max-width: 999px) {
 
   body {
     display: flex;
-    background: linear-gradient(45deg, #D42274, #2254D4, #28d73f);
     flex-direction: column-reverse;
     font-size: 48px;
     height: 100vh;
-    background-size: 600% 600%;
-    animation: gradientAnimation 30s ease infinite;
   }
 
-  div.container{
+  div.container {
     flex-direction: row;
   }
 
@@ -82,19 +84,14 @@ nav.container {
     bottom: 0;
     width: 100vw;
     display: flex;
-    grid-auto-flow: column;
-
-    & > a {
-      color: #f6f6f6;
-      text-decoration: none;
-    }
+    gap: 6rem;
+    box-shadow: inset 4px 11px 9px -7px rgba(0, 0, 0, 0.59);
+    padding: 1rem 0 1rem 0;
 
     &:hover {
       width: 100vw;
     }
-
   }
-
 }
 
 
