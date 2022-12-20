@@ -82,7 +82,6 @@ nav.container {
 
 // Phones and Phablets.
 @media screen and (max-width: 999px) {
-
   body {
     display: flex;
     font-size: 36px;
@@ -104,6 +103,19 @@ nav.container {
     &:hover {
       width: 100vw;
     }
+  }
+}
+
+// Phones and Phablets landscape. Because fuck being a web dev.
+@media screen and (max-width: 999px) and (orientation: landscape) {
+
+  div.container {
+    height: 70vh;
+    overflow: scroll;
+  }
+
+  nav.container {
+    height: 30vh;
   }
 }
 
